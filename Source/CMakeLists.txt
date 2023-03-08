@@ -30,6 +30,10 @@ add_library(luacpp_static STATIC ${SOURCE_FILES})
 
 set_target_properties(luacpp_static PROPERTIES OUTPUT_NAME luacpp)
 
+target_include_directories(luacpp_static
+    INTERFACE .
+    )
+
 # target_link_libraries(luacpp PUBLIC lua_static)
 target_link_libraries(luacpp_static PUBLIC lua_static)
 
